@@ -28,7 +28,7 @@ while True:
     has_data = False
     tempf = None
 
-    if humidity is not None and temperature is not None:
+    if humidity is not None and temperature is not None and humidity <= 100.0 and humidity >= 0.0:
         tempf = round((temperature * 1.8) + 32, 1)
         humidity = round(humidity, 1)
         logging.info("Temp={0:0.1f}*F Humidity={1:0.1f}%".format(tempf, humidity))
